@@ -19,7 +19,7 @@ char *takeUserInputFunction(char *colorcolorCode, char *colorType, int fsl, FILE
     buffer = (char *)malloc(sizeof(char) * bufferSize);
 
     //Check if new color colorCode is applied or not
-    if (strlen(colorcolorCode) != 0) {
+    if (strlen1(colorcolorCode) != 0) {
         promptWithColours(colorcolorCode, colorType);
     }   else
             prompt();
@@ -124,7 +124,7 @@ char **removeWhiteSpace(char **raw_data) {
         char *demo = (char *)malloc(sizeof(char) * BUFFER_SIZE);
         int id = 0;
 
-        for (int j = 0; j < strlen(raw_data[i]); j++) {
+        for (int j = 0; j < strlen1(raw_data[i]); j++) {
 
             if (raw_data[i][j] != ' ')
                 demo[id++] = raw_data[i][j];
@@ -146,11 +146,11 @@ char *strip(char *word) {
 
     int stflag = 0, endflag = 0;
 
-    for (int i = 0; i < strlen(word); i++) {
+    for (int i = 0; i < strlen1(word); i++) {
 
         if ((word[i] == ' ' or word[i] == '\n') and i == 0)
             continue;
-        else if ((word[i] == ' ' or word[i] == '\n') and i == strlen(word) - 1)
+        else if ((word[i] == ' ' or word[i] == '\n') and i == strlen1(word) - 1)
             continue;
         else
             demo[id++] = word[i];
@@ -177,10 +177,10 @@ void promptWithColours(char *code, char *colorType) {
     char *myuser = userName();
     char *myhost = hostName();
 
-    if (strcmp(colorType, "user")) {
+    if (strcmpr(colorType, "user")) {
         userFontColor = code;
     }
-    else if (strcmp(colorType, "host")) {
+    else if (strcmpr(colorType, "host")) {
         hostFontColor = code;
     }   else {
         bgColor = code;

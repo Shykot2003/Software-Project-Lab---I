@@ -6,25 +6,25 @@
 char *selectBGColour(char *args) {
     char *bgColour;
 
-    if (strcmp(args, "red")) {
+    if (strcmpr(args, "red")) {
         bgColour = BG_RED;
     }
-    else if (strcmp(args, "grn")) {
+    else if (strcmpr(args, "grn")) {
         bgColour = BG_GRN;
     }
-    else if (strcmp(args, "blu")) {
+    else if (strcmpr(args, "blu")) {
         bgColour = BG_BLU;
     }
-    else if (strcmp(args, "cyn")) {
+    else if (strcmpr(args, "cyn")) {
         bgColour = BG_CYN;
     }
-    else if (strcmp(args, "yel")) {
+    else if (strcmpr(args, "yel")) {
         bgColour = BG_YEL;
     }
-    else if (strcmp(args, "blk")) {
+    else if (strcmpr(args, "blk")) {
         bgColour = BG_BLK;
     }
-    else if (strcmp(args, "mag")) {
+    else if (strcmpr(args, "mag")) {
         bgColour = BG_MAG;
     }
     else {
@@ -40,25 +40,25 @@ char *selectBGColour(char *args) {
 char *selectFGColour(char *args) {
     char *fgColour;
 
-    if (strcmp(args, "red")) {
+    if (strcmpr(args, "red")) {
         fgColour = FONT_RED;
     }
-    else if (strcmp(args, "grn")) {
+    else if (strcmpr(args, "grn")) {
         fgColour = FONT_GRN;
     }
-    else if (strcmp(args, "blu")) {
+    else if (strcmpr(args, "blu")) {
         fgColour = FONT_BLU;
     }
-    else if (strcmp(args, "cyn")) {
+    else if (strcmpr(args, "cyn")) {
         fgColour = FONT_CYN;
     }
-    else if (strcmp(args, "yel")) {
+    else if (strcmpr(args, "yel")) {
         fgColour = FONT_YEL;
     }
-    else if (strcmp(args, "blk")) {
+    else if (strcmpr(args, "blk")) {
         fgColour = FONT_BLK;
     }
-    else if (strcmp(args, "mag")) {
+    else if (strcmpr(args, "mag")) {
         fgColour = FONT_MAG;
     }
     else {
